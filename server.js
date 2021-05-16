@@ -15,6 +15,8 @@ const { schema } = require("./graphql/schema");
 const fetch = require("node-fetch");
 const { v4: uuidv4 } = require("uuid");
 var app = express();
+const cors = require("cors");
+app.use(cors());
 
 // Serve static assets from the /public folder
 app.use("/public", express.static(path.join(__dirname, "/public")));
