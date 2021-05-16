@@ -19,6 +19,10 @@ var app = express();
 // Serve static assets from the /public folder
 app.use("/public", express.static(path.join(__dirname, "/public")));
 
+app.get("/", function(req, res) {
+  res.status(200).send("Make sure to star!");
+});
+
 var port = process.env.PORT || 1337;
 var httpServer = require("http").createServer(app);
 httpServer.listen(port, function() {
