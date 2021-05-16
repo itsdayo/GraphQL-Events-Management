@@ -22,7 +22,9 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 app.get("/", function(req, res) {
   res.status(200).send("Make sure to star!");
 });
-
+app.listen(3000, () => {
+  console.log("listening on port 3000");
+});
 var port = process.env.PORT || 1337;
 var httpServer = require("http").createServer(app);
 httpServer.listen(port, function() {
