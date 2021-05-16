@@ -9,8 +9,6 @@ var express = require("express");
 var ParseServer = require("parse-server").ParseServer;
 var path = require("path");
 
-
-
 const GraphQLHTTP = require("express-graphql").graphqlHTTP;
 const { schema } = require("./graphql/schema");
 
@@ -20,12 +18,6 @@ var app = express();
 
 // Serve static assets from the /public folder
 app.use("/public", express.static(path.join(__dirname, "/public")));
-
-
-
-
-
-
 
 var port = process.env.PORT || 1337;
 var httpServer = require("http").createServer(app);
