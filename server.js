@@ -84,7 +84,7 @@ fetch("http://assets.aloompa.com.s3.amazonaws.com/rappers/hiphopfest.json")
 
       getStageByName(name) {
         let stagesArray = data.stages.map((singleStage) => {
-          if (singleStage.name.includes(name)) {
+          if (singleStage.name.toUpperCase().includes(name.toUpperCase())) {
             return singleStage;
           }
         });
@@ -174,7 +174,7 @@ fetch("http://assets.aloompa.com.s3.amazonaws.com/rappers/hiphopfest.json")
       },
       getEventByName(name) {
         let eventsArray = data.events.map((singleEvent) => {
-          if (singleEvent.name.includes(name)) {
+          if (singleEvent.name.toUpperCase().includes(name.toUpperCase())) {
             return singleEvent;
           }
         });
