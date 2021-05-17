@@ -11,6 +11,8 @@ To start the server run these comands
 - `npm i`
 - `npm run dev`
 
+Head over to http://localhost:1337/graphql once server is started to write queries and mutations. 
+
 ### AWS Elastic Beanstalk
 
 Visit http://parseserver-env.eba-ngfjj4hr.us-east-1.elasticbeanstalk.com/graphql
